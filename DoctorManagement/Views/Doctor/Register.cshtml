@@ -4,59 +4,122 @@
     ViewData["Title"] = "Doctor Registration";
 }
 
-<h1>Doctor Registration</h1>
+<style>
+    .card {
+        background-color: #f8f9fa; /* Light gray background */
+        border: none;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+    }
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Register">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="FullName" class="control-label"></label>
-                <input asp-for="FullName" class="form-control" />
-                <span asp-validation-for="FullName" class="text-danger"></span>
+    .form-label {
+        color: #495057; /* Darker gray label text */
+        font-weight: 500; /* Slightly bolder labels */
+    }
+
+    .form-control {
+        border: 1px solid #ced4da; /* Lighter border */
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+        .form-control:focus {
+            border-color: #0d6efd; /* Primary blue focus color */
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Subtle focus shadow */
+        }
+
+    .btn-primary {
+        background-color: #007bff; /* Standard primary blue */
+        border-color: #007bff;
+        transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, transform 0.1s ease-in-out;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            border-color: #0056b3;
+            transform: scale(1.02); /* Slight scale-up on hover */
+        }
+
+    .text-danger {
+        font-size: 0.9em; /* Slightly smaller error messages */
+        opacity: 0.8; /* Less prominent error text */
+    }
+
+    a {
+        color: #007bff; /* Primary blue for links */
+        text-decoration: none;
+        transition: color 0.15s ease-in-out;
+    }
+
+        a:hover {
+            color: #0056b3; /* Darker blue on hover */
+            text-decoration: underline;
+        }
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg rounded-lg p-5">
+                <h1 class="text-center mb-4 text-primary">Doctor Registration</h1> <form asp-action="Register">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="FullName" class="form-label">Full Name</label>
+                        <input asp-for="FullName" class="form-control form-control-lg rounded-pill" />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label">Email</label>
+                        <input asp-for="Email" class="form-control form-control-lg rounded-pill" type="email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label">Password</label>
+                        <input asp-for="Password" class="form-control form-control-lg rounded-pill" type="password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                        <input asp-for="PhoneNumber" class="form-control form-control-lg rounded-pill" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Specialty" class="form-label">Specialty</label>
+                        <input asp-for="Specialty" class="form-control form-control-lg rounded-pill" />
+                        <span asp-validation-for="Specialty" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Qualification" class="form-label">Qualification</label>
+                        <input asp-for="Qualification" class="form-control form-control-lg rounded-pill" />
+                        <span asp-validation-for="Qualification" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="ExperienceYears" class="form-label">Experience (Years)</label>
+                        <input asp-for="ExperienceYears" class="form-control form-control-lg rounded-pill" type="number" />
+                        <span asp-validation-for="ExperienceYears" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Availability" class="form-label">Availability</label>
+                        <input asp-for="Availability" class="form-control form-control-lg rounded-pill" />
+                        <span asp-validation-for="Availability" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg rounded-pill">Register</button>
+                    </div>
+
+                    <div class="mt-4 text-center">
+                        Already have an account? <a asp-action="Login">Login</a>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" type="password" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Specialty" class="control-label"></label>
-                <input asp-for="Specialty" class="form-control" />
-                <span asp-validation-for="Specialty" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Qualification" class="control-label"></label>
-                <input asp-for="Qualification" class="form-control" />
-                <span asp-validation-for="Qualification" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ExperienceYears" class="control-label"></label>
-                <input asp-for="ExperienceYears" class="form-control" />
-                <span asp-validation-for="ExperienceYears" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Availability" class="control-label"></label>
-                <input asp-for="Availability" class="form-control" />
-                <span asp-validation-for="Availability" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Register" class="btn btn-primary" />
-            </div>
-            <div>
-                Already have an account? <a asp-action="Login">Login</a>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 

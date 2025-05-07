@@ -2,25 +2,129 @@
     ViewData["Title"] = "Doctor Login";
 }
 
-<h1>Doctor Login</h1>
+<style>
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f8f9fa; /* Light gray background */
+        padding: 20px;
+    }
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Login" method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
+    .login-title {
+        font-size: 2.8rem; /* Slightly larger title */
+        color: #007bff; /* Primary blue title */
+        margin-bottom: 40px; /* More space below title */
+        text-align: center;
+        font-weight: 600; /* Slightly bolder title */
+    }
+
+    .login-form-wrapper {
+        background-color: #fff;
+        padding: 40px; /* More padding inside the form wrapper */
+        border-radius: 12px; /* More rounded corners */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+        width: 100%;
+        max-width: 450px; /* Slightly wider form */
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 25px; /* More spacing between form groups */
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 10px;
+        color: #495057; /* Darker label text */
+        font-weight: 500;
+        font-size: 1.1rem; /* Slightly larger label */
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 15px; /* More padding inside input */
+        border: 1px solid #ced4da;
+        border-radius: 8px; /* More rounded input */
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #0d6efd; /* Primary blue focus */
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Subtle focus shadow */
+        }
+
+    .submit-button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 15px 20px; /* More padding for button */
+        border: none;
+        border-radius: 8px; /* More rounded button */
+        font-size: 1.2rem; /* Larger button text */
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out, transform 0.1s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+    }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.02); /* Slight scale-up on hover */
+        }
+
+    .validation-summary {
+        margin-bottom: 20px;
+        color: #dc3545; /* Bootstrap danger color for errors */
+        font-size: 0.9em;
+        opacity: 0.8;
+    }
+
+    .form-footer {
+        text-align: center;
+        margin-top: 30px;
+        color: #6c757d; /* Muted text color */
+        font-size: 1rem;
+    }
+
+    .register-link {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
+    }
+
+        .register-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+</style>
+
+<div class="login-container">
+    <div class="login-form-wrapper">
+        <h1 class="login-title">Doctor Login</h1>
+        <form asp-action="Login" method="post" class="login-form">
+            <div asp-validation-summary="All" class="text-danger validation-summary"></div>
             <div class="form-group">
-                <label for="email" class="control-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" />
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control input-field" placeholder="Your Email Address" />
             </div>
             <div class="form-group">
-                <label for="password" class="control-label">Password</label>
-                <input type="password" id="password" name="password" class="form-control" />
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control input-field" placeholder="Your Password" />
             </div>
             <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary" />
+                <button type="submit" class="btn btn-primary submit-button btn-lg rounded-pill">Login</button>
             </div>
-            <div>
-                Need an account? <a asp-action="Register">Register</a>
+            <div class="form-footer">
+                Need an account? <a asp-action="Register" class="register-link">Register</a>
             </div>
         </form>
     </div>

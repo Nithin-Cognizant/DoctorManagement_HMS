@@ -4,24 +4,123 @@
     ViewData["Title"] = "Set Availability";
 }
 
-<h1>Set Availability</h1>
+<style>
+    .set-availability-container {
+        padding: 30px;
+        background-color: #f8f9fa; /* Light gray background */
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+        margin-top: 30px;
+    }
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="SetAvailability" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="DoctorId" />
-            <div class="form-group">
-                <label for="availability" class="control-label">Availability (e.g., '10AM - 12PM, 2PM - 4PM')</label>
-                <input type="text" id="availability" name="availability" class="form-control" value="@Model.Availability" />
-                <span asp-validation-for="Availability" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save Availability" class="btn btn-primary" />
-            </div>
-            <div>
-                <a asp-action="Dashboard" asp-route-doctorId="@Model.DoctorId">Back to Dashboard</a>
-            </div>
-        </form>
+    .set-availability-header h1 {
+        font-size: 2.5rem;
+        color: #007bff; /* Primary blue */
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .availability-form-wrapper {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+        border: 1px solid #eee;
+        max-width: 500px; /* Limit form width */
+        margin: 0 auto; /* Center the form */
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 10px;
+        color: #555;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #0d6efd; /* Primary blue focus */
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+
+    .text-danger {
+        font-size: 0.9em;
+        color: #dc3545; /* Bootstrap danger color */
+        margin-top: 5px;
+    }
+
+    .btn-primary {
+        background-color: #28a745; /* Success green */
+        border-color: #28a745;
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out, transform 0.1s ease-in-out;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .btn-primary:hover {
+            background-color: #1e7e34;
+            transform: scale(1.02);
+        }
+
+    .back-to-dashboard {
+        margin-top: 30px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+        .back-to-dashboard a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.15s ease-in-out;
+        }
+
+            .back-to-dashboard a:hover {
+                color: #0056b3;
+                text-decoration: underline;
+            }
+</style>
+
+<div class="container mt-5">
+    <div class="set-availability-container">
+        <div class="set-availability-header">
+            <h1>Set Availability</h1>
+        </div>
+        <div class="availability-form-wrapper">
+            <form asp-action="SetAvailability" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="DoctorId" />
+                <div class="form-group">
+                    <label for="availability" class="form-label">Availability (e.g., 'Mon: 9AM-5PM, Tue: OFF')</label>
+                    <input type="text" id="availability" name="availability" class="form-control form-control-lg" value="@Model.Availability" placeholder="Enter your availability schedule" />
+                    <span asp-validation-for="Availability" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" value="Save Availability" class="btn btn-primary btn-lg rounded-pill">Save Availability</button>
+                </div>
+                <div class="back-to-dashboard">
+                    <a asp-action="Dashboard" asp-route-doctorId="@Model.DoctorId">Back to Dashboard</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

@@ -4,57 +4,149 @@
     ViewData["Title"] = "Doctor Dashboard";
 }
 
-<h1>Welcome, @Model.FullName!</h1>
+<style>
+    .dashboard-container {
+        padding: 30px;
+        background-color: #f8f9fa; /* Light gray background */
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+        margin-top: 30px;
+    }
 
-<div>
-    <h4>Your Profile Information</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            Full Name
-        </dt>
-        <dd class="col-sm-10">
-            @Model.FullName
-        </dd>
-        <dt class="col-sm-2">
-            Email
-        </dt>
-        <dd class="col-sm-10">
-            @Model.Email
-        </dd>
-        <dt class="col-sm-2">
-            Phone Number
-        </dt>
-        <dd class="col-sm-10">
-            @Model.PhoneNumber
-        </dd>
-        <dt class="col-sm-2">
-            Specialty
-        </dt>
-        <dd class="col-sm-10">
-            @Model.Specialty
-        </dd>
-        <dt class="col-sm-2">
-            Qualification
-        </dt>
-        <dd class="col-sm-10">
-            @Model.Qualification
-        </dd>
-        <dt class="col-sm-2">
-            Experience (Years)
-        </dt>
-        <dd class="col-sm-10">
-            @Model.ExperienceYears
-        </dd>
-        <dt class="col-sm-2">
-            Availability
-        </dt>
-        <dd class="col-sm-10">
-            @Model.Availability
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="EditProfile" asp-route-doctorId="@Model.DoctorId" class="btn btn-primary">Edit Profile</a>
-    <a asp-action="SetAvailability" asp-route-doctorId="@Model.DoctorId" class="btn btn-info">Set Availability</a>
+    .dashboard-header {
+        color: #333;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .dashboard-header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #007bff; /* Primary blue */
+        }
+
+    .profile-info {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+        border: 1px solid #eee;
+    }
+
+        .profile-info h4 {
+            color: #555;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+    .row dt {
+        font-weight: 500;
+        color: #333;
+    }
+
+    .row dd {
+        color: #555;
+    }
+
+    .action-buttons a {
+        margin-right: 15px;
+        transition: transform 0.1s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+        .action-buttons a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #fff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        color: #fff;
+    }
+
+        .btn-info:hover {
+            background-color: #117a8b;
+            border-color: #117a8b;
+        }
+</style>
+
+<div class="container mt-5">
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Welcome, <span class="text-primary">@Model.FullName</span>!</h1>
+            <div>
+                <span class="badge bg-success">Online</span>
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <h4>Your Profile Information</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">
+                    Full Name
+                </dt>
+                <dd class="col-sm-9">
+                    @Model.FullName
+                </dd>
+                <dt class="col-sm-3">
+                    Email
+                </dt>
+                <dd class="col-sm-9">
+                    @Model.Email
+                </dd>
+                <dt class="col-sm-3">
+                    Phone Number
+                </dt>
+                <dd class="col-sm-9">
+                    @Model.PhoneNumber
+                </dd>
+                <dt class="col-sm-3">
+                    Specialty
+                </dt>
+                <dd class="col-sm-9">
+                    @Model.Specialty
+                </dd>
+                <dt class="col-sm-3">
+                    Qualification
+                </dt>
+                <dd class="col-sm-9">
+                    @Model.Qualification
+                </dd>
+                <dt class="col-sm-3">
+                    Experience (Years)
+                </dt>
+                <dd class="col-sm-9">
+                    @Model.ExperienceYears
+                </dd>
+                <dt class="col-sm-3">
+                    Availability
+                </dt>
+                <dd class="col-sm-9">
+                    @Model.Availability
+                </dd>
+            </dl>
+        </div>
+
+        <div class="action-buttons mt-4">
+            <a asp-action="EditProfile" asp-route-doctorId="@Model.DoctorId" class="btn btn-primary rounded-pill btn-lg">Edit Profile</a>
+            <a asp-action="SetAvailability" asp-route-doctorId="@Model.DoctorId" class="btn btn-info rounded-pill btn-lg">Set Availability</a>
+        </div>
+    </div>
 </div>
