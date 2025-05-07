@@ -1,0 +1,60 @@
+﻿@model DoctorManagement.Repository.Models.Doctor
+
+@{
+    ViewData["Title"] = "Doctor Dashboard";
+}
+
+<h1>Welcome, @Model.FullName!</h1>
+
+<div>
+    <h4>Your Profile Information</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Full Name
+        </dt>
+        <dd class="col-sm-10">
+            @Model.FullName
+        </dd>
+        <dt class="col-sm-2">
+            Email
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Email
+        </dd>
+        <dt class="col-sm-2">
+            Phone Number
+        </dt>
+        <dd class="col-sm-10">
+            @Model.PhoneNumber
+        </dd>
+        <dt class="col-sm-2">
+            Specialty
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Specialty
+        </dd>
+        <dt class="col-sm-2">
+            Qualification
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Qualification
+        </dd>
+        <dt class="col-sm-2">
+            Experience (Years)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.ExperienceYears
+        </dd>
+        <dt class="col-sm-2">
+            Availability
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Availability
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditProfile" asp-route-doctorId="@Model.DoctorId" class="btn btn-primary">Edit Profile</a>
+    <a asp-action="SetAvailability" asp-route-doctorId="@Model.DoctorId" class="btn btn-info">Set Availability</a>
+</div>

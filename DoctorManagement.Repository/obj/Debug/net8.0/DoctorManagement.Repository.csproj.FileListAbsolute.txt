@@ -1,0 +1,14 @@
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\bin\Debug\net8.0\DoctorManagement.Repository.deps.json
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\bin\Debug\net8.0\DoctorManagement.Repository.runtimeconfig.json
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\bin\Debug\net8.0\DoctorManagement.Repository.dll
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\bin\Debug\net8.0\DoctorManagement.Repository.pdb
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\DoctorManagement.Repository.csproj.AssemblyReference.cache
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\DoctorManagement.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\DoctorManagement.Repository.AssemblyInfoInputs.cache
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\DoctorManagement.Repository.AssemblyInfo.cs
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\DoctorManagement.Repository.csproj.CoreCompileInputs.cache
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\DoctorManagement.Repository.dll
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\refint\DoctorManagement.Repository.dll
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\DoctorManagement.Repository.pdb
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\DoctorManagement.Repository.genruntimeconfig.cache
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.Repository\obj\Debug\net8.0\ref\DoctorManagement.Repository.dll

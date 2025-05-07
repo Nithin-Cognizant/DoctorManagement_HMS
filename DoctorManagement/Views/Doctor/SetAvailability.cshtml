@@ -1,0 +1,27 @@
+﻿@model DoctorManagement.Repository.Models.Doctor
+
+@{
+    ViewData["Title"] = "Set Availability";
+}
+
+<h1>Set Availability</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SetAvailability" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DoctorId" />
+            <div class="form-group">
+                <label for="availability" class="control-label">Availability (e.g., '10AM - 12PM, 2PM - 4PM')</label>
+                <input type="text" id="availability" name="availability" class="form-control" value="@Model.Availability" />
+                <span asp-validation-for="Availability" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save Availability" class="btn btn-primary" />
+            </div>
+            <div>
+                <a asp-action="Dashboard" asp-route-doctorId="@Model.DoctorId">Back to Dashboard</a>
+            </div>
+        </form>
+    </div>
+</div>

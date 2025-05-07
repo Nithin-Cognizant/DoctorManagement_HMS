@@ -1,0 +1,15 @@
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\bin\Debug\net8.0\DoctorManagement.BusinessLogic.deps.json
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\bin\Debug\net8.0\DoctorManagement.BusinessLogic.dll
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\bin\Debug\net8.0\DoctorManagement.BusinessLogic.pdb
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\bin\Debug\net8.0\DoctorManagement.Repository.dll
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\bin\Debug\net8.0\DoctorManagement.Repository.pdb
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\DoctorManagement.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\DoctorManagement.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\DoctorManagement.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\DoctorManagement.BusinessLogic.AssemblyInfo.cs
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\DoctorManagement.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\DoctorMa.E69B5B4F.Up2Date
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\DoctorManagement.BusinessLogic.dll
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\refint\DoctorManagement.BusinessLogic.dll
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\DoctorManagement.BusinessLogic.pdb
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement.BusinessLogic\obj\Debug\net8.0\ref\DoctorManagement.BusinessLogic.dll
