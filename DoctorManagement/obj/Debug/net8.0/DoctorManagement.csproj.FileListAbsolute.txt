@@ -174,3 +174,4 @@ C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement\obj\Debug\
 C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement\obj\Debug\net8.0\DoctorManagement.pdb
 C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement\obj\Debug\net8.0\DoctorManagement.genruntimeconfig.cache
 C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement\obj\Debug\net8.0\ref\DoctorManagement.dll
+C:\Users\2407111\source\repos\DoctorManagementModule\DoctorManagement\obj\Debug\net8.0\DoctorManagement.sourcelink.json
