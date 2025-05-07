@@ -2,52 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center vh-70">
+        <div class="col-md-8 text-center bg-light rounded shadow p-5">
+            <h1 class="display-4 text-primary mb-4 fw-bold text-shadow">Welcome to Doctor Management</h1>
+            <p class="lead text-secondary mb-5">Explore the features designed to streamline your practice and enhance patient care. Learn more about <a href="https://learn.microsoft.com/aspnet/core" class="text-success fw-semibold text-decoration-none">our comprehensive tools</a>.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a asp-action="Register" asp-controller="Doctor" class="btn btn-primary btn-lg px-4 rounded-pill fw-semibold">Get Started</a>
+                <a asp-action="Login" asp-controller="Doctor" class="btn btn-outline-secondary btn-lg px-4 rounded-pill fw-semibold">Log In</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <style>
-    .text-center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .vh-70 {
         min-height: 70vh; /* Adjust as needed for vertical centering */
-        padding: 40px;
-        background-color: #f8f9fa; /* Light background */
-        border-radius: 12px;
-        margin-top: 30px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     }
 
-    .display-4 {
-        font-size: 3.5rem;
-        color: #007bff; /* Primary blue */
-        margin-bottom: 20px;
-        font-weight: 600;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    p {
-        font-size: 1.2rem;
-        color: #555;
-        margin-bottom: 30px;
-        text-align: center;
-        max-width: 600px; /* Limit text width for better readability */
-    }
-
-    p a {
-        color: #28a745; /* Success green for the link */
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.15s ease-in-out, text-decoration 0.15s ease-in-out;
-    }
-
-    p a:hover {
-        color: #1e7e34;
-        text-decoration: underline;
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
     }
 </style>
-
-<div class="container mt-5">
-    <div class="text-center">
-        <h1 class="display-4">Welcome to Doctor Management</h1>
-        <p>Explore the features designed to streamline your practice and enhance patient care. Learn more about <a href="https://learn.microsoft.com/aspnet/core">our comprehensive tools</a>.</p>
-        </div>
-</div>
